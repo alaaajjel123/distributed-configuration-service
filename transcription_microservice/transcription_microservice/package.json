@@ -1,0 +1,19 @@
+{
+  "name": "transcription_microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "node-redis-pubsub": "^5.0.0",
+    "nodemon": "^3.0.1",
+    "redis": "^4.6.7"
+  }
+}

@@ -1,0 +1,50 @@
+version: '3'
+services:
+   config_service:
+     image: node:16-alpine
+     container_name: config_service
+     working_dir: /app
+     command: npm run dev
+     ports:
+       - "2023:2023"
+     volumes:
+       - "./config_service/:/app"  
+     #networks:        
+       #- my_network
+   dashboard:
+     image: node:16-alpine
+     container_name: dashboard
+     working_dir: /app
+     command: npm start
+     ports:
+       - "3000:3000"
+     volumes:
+       - "./dashboard/:/app"
+     #networks:      
+       #- my_network
+   redis:
+      image: redis
+      container_name: redis
+      #command: bash -c "redis-server --appendonly yes"
+      command: redis-server /usr/local/etc/redis/redis.conf   # Remove 'bash -c' from the command
+      volumes:
+        - ./data:/data      
+      #
+        - ./redis.conf:/usr/local/etc/redis/redis.conf       # Mount redis.conf
+        - ./users.acl:/etc/redis/users.acl                   # Mount users.acl
+
+      #
+      #networks:        
+       #- my_network
+#networks:            
+  #my_network:
+
+#volumes:
+  #redis-data:
+    #driver: local
+
+
+networks: 
+  default: 
+    external: 
+      name: external-network

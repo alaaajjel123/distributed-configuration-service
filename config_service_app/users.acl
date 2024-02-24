@@ -1,0 +1,2 @@
+user config_service_admin on >config_service_123 ~* &* +@all
+

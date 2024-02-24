@@ -1,0 +1,16 @@
+version: '3'
+services:
+   segmentation_microservice:
+      image: node:16-alpine
+      container_name: transcription_microservice
+      working_dir: /app
+      command: npm run dev
+      ports:
+        - "5556:5556"
+      volumes:
+        - "./transcription_microservice/:/app"
+
+networks: 
+  default: 
+    external: 
+      name: external-network

@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/*
+body {
+  /*font-family: 'Raleway', sans-serif;
+  background: #1a1e23;
+}*/
+
+
+.container-SelectDatePage{
+    background: #1a1e23;
+}
+
+.container-SelectDatePage .list-choice{
+    width:300px;
+    margin:1em auto;
+    margin-top: 150px;
+    position: relative;
+    cursor: pointer;  
+  }
+.container-SelectDatePage .list-choice input[type="radio"]{
+    position:absolute;
+    left:-9999px;
+  }
+  
+  .container-SelectDatePage .list-choice-title {
+  width: 100%;
+  display: block;
+  background: #D8D8D8;
+  text-align: center;
+  padding: 0.55em 1em;
+  box-sizing: border-box;
+  color: #FFF;
+  text-shadow: 0 1px 0 #CACACA;
+  border-radius: 0.2em;
+  }
+  .container-SelectDatePage .list-choice:hover .list-choice-title {
+  border-radius:0.2em 0.2em 0 0;
+  }
+  .container-SelectDatePage .list-choice-objects label:nth-last-of-type(1) span{
+    border-radius:0 0 0.2em 0.2em;
+  }
+  .container-SelectDatePage .list-choice input[type="radio"] + span {
+  color: #FFF;
+  background: #D8D8D8;
+  padding: 0.55em 1em;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+  }
+  .container-SelectDatePage .list-choice-objects {
+  position: absolute;
+  top: 0;
+  padding-top: 2.1em;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 250ms ease;
+  }
+  .container-SelectDatePage .list-choice:hover .list-choice-objects  input[type="radio"] + span {
+  position: relative;
+  top: 0;
+  transition: all 250ms ease-in-out;
+  }
+  .container-SelectDatePage .list-choice:hover input[type="radio"] + span:hover {
+  background:#BBB;
+  }
+  .container-SelectDatePage .list-choice:hover input[type="radio"]:checked + span:hover {
+  background:#fff;
+  }
+  .container-SelectDatePage .list-choice input[type="radio"]:checked + span {
+  background: #fff;
+  position: absolute;
+  top: 0em;
+  border-radius: 0.2em;
+  }
+  .container-SelectDatePage .list-choice:hover input[type="radio"]:checked + span {
+  border-radius: 0;
+  }
+  .container-SelectDatePage .list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked + span{
+    border-radius:0 0 0.2em 0.2em;
+  }
+  
+  .container-SelectDatePage .list-choice:hover .list-choice-objects {
+  max-height: 1300px;
+  }
+
+
